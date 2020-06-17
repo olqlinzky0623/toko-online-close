@@ -2,12 +2,11 @@
   "name": "toko-online",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "prebuild": "rm -rf dist",
+    "prod:serve": "node dist/server.js",
     "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "nodemon ./dist/index.js"
+    "start": "npm run build && npm prod:serve",
+    "dev": "nodemon ./dist/server.js"
   },
   "keywords": [],
   "author": "",
